@@ -1,0 +1,21 @@
+[
+  {
+    "id": "u1",
+    "name": "Juan Pérez",
+    "email": "juanperez@example.com",
+    "avatar": "https://via.placeholder.com/150x150.png?text=JP",
+    "orders": [
+      { "id": "o1", "date": "2024-01-15", "total": 59990, "status": "Entregado" },
+      { "id": "o2", "date": "2024-02-03", "total": 129990, "status": "En camino" }
+    ]
+  },
+  {
+    "id": "u2",
+    "name": "María González",
+    "email": "maria.gonzalez@example.com",
+    "avatar": "https://via.placeholder.com/150x150.png?text=MG",
+    "orders": [
+      { "id": "o3", "date": "2024-03-01", "total": 29990, "status": "Pendiente" }
+    ]
+  }
+]

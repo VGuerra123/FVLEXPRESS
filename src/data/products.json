@@ -1,0 +1,47 @@
+[
+  {
+    "id": "p1",
+    "name": "Smartphone Pro X",
+    "price": 399990,
+    "image": "https://via.placeholder.com/400x400?text=Smartphone+Pro+X",
+    "rating": 4.7,
+    "category": "electronics",
+    "tags": ["premium", "top", "flash"]
+  },
+  {
+    "id": "p2",
+    "name": "Zapatillas Urban Style",
+    "price": 49990,
+    "image": "https://via.placeholder.com/400x400?text=Zapatillas+Urban+Style",
+    "rating": 4.5,
+    "category": "fashion",
+    "tags": ["new", "recommended", "bestseller"]
+  },
+  {
+    "id": "p3",
+    "name": "Audífonos Inalámbricos",
+    "price": 29990,
+    "image": "https://via.placeholder.com/400x400?text=Audifonos+Inalambricos",
+    "rating": 4.6,
+    "category": "electronics",
+    "tags": ["flash", "recommended"]
+  },
+  {
+    "id": "p4",
+    "name": "Smartwatch Active",
+    "price": 89990,
+    "image": "https://via.placeholder.com/400x400?text=Smartwatch+Active",
+    "rating": 4.4,
+    "category": "electronics",
+    "tags": ["premium", "new"]
+  },
+  {
+    "id": "p5",
+    "name": "Mochila Escolar Kids",
+    "price": 19990,
+    "image": "https://via.placeholder.com/400x400?text=Mochila+Escolar",
+    "rating": 4.3,
+    "category": "kids",
+    "tags": ["kids", "recommended"]
+  }
+]
