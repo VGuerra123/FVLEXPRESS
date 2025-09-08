@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { LoadingScreen } from './components/LoadingScreen';
-import { Header } from './components/Header';
-import { HeroSection } from './components/HeroSection';
-import { AboutSection } from './components/AboutSection';
-import { TechnologySection } from './components/TechnologySection';
-import { ServicesSection } from './components/ServicesSection';
-import { TrackingSection } from './components/TrackingSection';
-import { ContactForm } from './components/ContactForm';
-import { Cart } from './components/Cart';
-import { Footer } from './components/Footer';
-import type { CartItem } from './types';
+import React, { useState } from "react";
+import { LoadingScreen } from "./components/LoadingScreen";
+import { Header } from "./components/Header";
+import { HeroSection } from "./components/HeroSection";
+import { AboutSection } from "./components/AboutSection";
+import { TechnologySection } from "./components/TechnologySection";
+import { ServicesSection } from "./components/ServicesSection";
+import { TrackingSection } from "./components/TrackingSection";
+import { ContactForm } from "./components/ContactForm";
+import { Cart } from "./components/Cart";
+import { Footer } from "./components/Footer";
+import type { CartItem } from "./types";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,10 +20,10 @@ function App() {
     setIsLoading(false);
   };
 
-  const handleAddToCart = (item: Omit<CartItem, 'id'> & { id?: string }) => {
+  const handleAddToCart = (item: Omit<CartItem, "id"> & { id?: string }) => {
     const newItem: CartItem = {
       ...item,
-      id: item.id || `${item.type}-${Date.now()}`,
+      id: item.id || `${item.type}-${Date.now()}`
     };
 
     setCartItems((prev) => {
@@ -45,9 +45,7 @@ function App() {
       return;
     }
     setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity } : item
-      )
+      prev.map((item) => (item.id === id ? { ...item, quantity } : item))
     );
   };
 
@@ -56,8 +54,7 @@ function App() {
   };
 
   const handleCheckout = () => {
-    // Aquí puedes integrar lógica de pago o abrir un modal
-    console.log('Checkout iniciado');
+    console.log("Checkout iniciado");
   };
 
   if (isLoading) {
@@ -66,7 +63,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header con carrito */}
       <Header
         cartItemsCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
         onCartClick={() => setIsCartOpen(true)}
@@ -83,7 +79,6 @@ function App() {
 
       <Footer />
 
-      {/* Carrito */}
       <Cart
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}

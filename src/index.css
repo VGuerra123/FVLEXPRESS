@@ -1,3 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #F0F4FF 0%, #E8EDF4 50%, #F8FAFC 100%);
+    min-height: 100vh;
+    color: #1E293B;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Botones */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 text-white font-semibold py-3 px-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-white text-primary-800 font-semibold py-3 px-6 rounded-2xl border border-primary-200 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  .btn-ghost {
+    @apply text-primary-700 font-semibold py-3 px-6 rounded-2xl hover:bg-primary-50 transition-all duration-300;
+  }
+
+  /* Cards */
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-glass border border-white/20 rounded-3xl shadow-glass hover:shadow-lg transition-all duration-500;
+  }
+  .card-product {
+    @apply bg-white border border-gray-200 rounded-3xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 duration-500;
+  }
+  .card-feature {
+    @apply bg-gradient-to-br from-primary-500/10 to-primary-800/5 backdrop-blur-glass border border-primary-200/30 rounded-2xl shadow-md hover:shadow-lg transition-all duration-500;
+  }
+
+  /* Texto y Gradientes */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent font-bold;
+  }
+  .price-highlight {
+    @apply text-2xl font-bold text-primary-800 animate-neural-pulse;
+  }
+
+  /* Badges */
+  .badge-hot {
+    @apply bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-pulse;
+  }
+  .badge-new {
+    @apply bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-quantum-float;
+  }
+  .badge-trending {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-cyber-glow;
+  }
+
+  /* Efectos */
+  .floating-element {
+    @apply transition-transform duration-500 hover:-translate-y-2 hover:scale-105;
+  }
+  .glass-morphism {
+    @apply bg-white/20 backdrop-blur-glass border border-white/30 rounded-3xl shadow-md;
+  }
+  .shimmer-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: glassShine 2s infinite;
+  }
+
+  /* Utilidades marketplace */
+  .product-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+  .category-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+  }
+  .search-input {
+    @apply w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-primary-200 rounded-2xl focus:ring-4 focus:ring-primary-200/50 focus:border-primary-400 outline-none transition-all duration-300 shadow-sm;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .container-responsive {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0B7EC8, #0c4a6e);
+  border-radius: 3px;
+}
